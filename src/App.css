@@ -1,0 +1,155 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  display: grid;;
+}
+img {
+  max-width: 50%;
+  height: auto;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.content {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+  "shop cart";
+  width: 100%;
+  padding-top: 50px; /* Adjust this value based on the height of your navbar */
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1em;
+  padding: 1em;
+  grid-area: cart;
+}
+
+.cart li img {
+  max-width: 20%;
+}
+
+.cartdrop {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially off-screen */
+  width: 20%; /* Adjust the width as needed */
+  height: 100%;
+  background-color: white; /* Adjust the background color as needed */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out; /* Smooth transition */
+  z-index: 1000; /* Ensure it appears above other elements */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.cartdrop.open {
+  right: 0; /* Slide into view */
+  opacity: 0.8; /* Make the background opaque */
+  sc
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1em;
+  padding: 1em;
+  grid-area: shop;
+}
+
+.shop li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 0.5em;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.shop li h3,
+.shop li p,
+.shop li label,
+.shop li button {
+  margin-bottom: 1em; /* Adjust the value as needed */
+}
+
+.shop li img {
+  margin-bottom: 1em; /* Add space below the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+}
+
+button {
+  padding: 0.5em 1em;
+  margin: 1em;
+  font-size: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-button {
+  background-color: white;
+  columns: white;
+}
+
+.cart-close {
+  justify-items: flex-start;
+  width: 4em;
+  background-color: black;
+  columns: white;
+}
+
+li {
+  list-style: none; /* Remove default list styles */
+  margin: 0;
+  padding: 0;
+}
